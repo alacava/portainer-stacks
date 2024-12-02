@@ -3,7 +3,7 @@ services:
     container_name: portainer-backup
     image: savagesoftware/portainer-backup:latest
     hostname: portainer-backup
-    restart: unless-stopped
+    #restart: unless-stopped
     command: schedule
     environment:
       TZ: America/New_York
