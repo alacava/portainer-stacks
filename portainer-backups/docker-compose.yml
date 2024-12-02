@@ -3,7 +3,7 @@ services:
     container_name: portainer-backup
     image: antlac1/portainer-backup:latest
     hostname: portainer-backup
-    #restart: unless-stopped
+    restart: unless-stopped
     command: schedule
     environment:
       TZ: America/New_York
@@ -11,7 +11,7 @@ services:
       PORTAINER_BACKUP_TOKEN: "${PORTAINER_ACCESS_TOKEN}"
       PORTAINER_BACKUP_PASSWORD: "${BU_PASSWORD}"
       PORTAINER_BACKUP_OVERWRITE: 1
-      PORTAINER_BACKUP_SCHEDULE: "0 40 21 * * *"
+      PORTAINER_BACKUP_SCHEDULE: "0 45 21 * * *"
       PORTAINER_BACKUP_STACKS: 1
       PORTAINER_BACKUP_DRYRUN: 0
       PORTAINER_BACKUP_CONCISE: 1
