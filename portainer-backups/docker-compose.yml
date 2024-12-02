@@ -1,7 +1,7 @@
 services:
   portainer-backup:
     container_name: portainer-backup
-    image: savagesoftware/portainer-backup:latest
+    image: antlac1/portainer-backup:latest
     hostname: portainer-backup
     #restart: unless-stopped
     command: schedule
