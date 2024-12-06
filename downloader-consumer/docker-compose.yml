@@ -1,8 +1,12 @@
 services:
   downloader-consumer:
     image: antlac1/downloader-consumer:latest
-    env_file:
-        - stack.env
+    environment:
+        - PTUSERNAME=${PTUSERNAME}
+        - PTPASSWORD=${PTPASSWORD}
+        - B2_keyID=${B2_keyID}
+        - B2_appKey=${B2_appKey}
+        - HOSTSERVER=${HOSTSERVER}
     user: 0:0
     volumes:
         - /opt/archive:/opt/archive
