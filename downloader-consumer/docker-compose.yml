@@ -1,0 +1,14 @@
+services:
+  downloader-consumer:
+    image: antlac1/downloader-consumer:latest
+    env_file:
+        - stack.env
+    user: 0:0
+    volumes:
+        - /opt/archive:/opt/archive
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
+    deploy:
+      mode: replicated
+      replicas: 3
