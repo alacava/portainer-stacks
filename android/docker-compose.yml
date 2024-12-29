@@ -1,20 +1,20 @@
 services:
 # Launch emulator and appium instance
-  android-service:
-    image: antlac1/android-emulator
-    ports:
-      - 4725:4725
-    container_name: android
-    environment:
-      - APPIUM_PORT=4725
-    privileged: true
-    command:
-      - bash
-      - -c
-      - | 
-         ./start_emu_headless.sh
-    tty: true
-    stdin_open: true
+#  android-service:
+#    image: antlac1/android-emulator
+#    ports:
+#      - 4725:4725
+#    container_name: android
+#    environment:
+#      - APPIUM_PORT=4725
+#    privileged: true
+#    command:
+#      - bash
+#      - -c
+#      - | 
+#         ./start_emu_headless.sh
+#    tty: true
+#    stdin_open: true
 # Starting VNC server
   VNC-Service:
     image: antlac1/android-emulator
