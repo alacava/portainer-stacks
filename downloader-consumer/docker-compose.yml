@@ -14,3 +14,18 @@ services:
     deploy:
       mode: replicated
       replicas: 3
+  downloader-getvideos:
+    image: registry.lacavatech.com/antlac1/downloader-profiles-getvideos
+    environment:
+        - PTUSERNAME=${PTUSERNAME}
+        - PTPASSWORD=${PTPASSWORD}
+        - B2_keyID=${B2_keyID}
+        - B2_appKey=${B2_appKey}
+        - HOSTSERVER=${HOSTSERVER}
+    user: 0:0
+    volumes:
+        - /opt/archive:/opt/archive
+    restart: unless-stopped
+    deploy:
+      mode: replicated
+      replicas: 3
