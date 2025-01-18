@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
     deploy:
       mode: replicated
-      replicas: 3
+      replicas: 1
 #  downloader-getvideos:
 #    image: registry.lacavatech.com/antlac1/downloader-profiles-getvideos
 #    environment:
