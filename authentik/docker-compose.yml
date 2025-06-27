@@ -1,6 +1,6 @@
 services:
   postgresql:
-    image: docker.io/library/postgres:16-alpine:sha256:d60bd50d7e2d688f6dcfff8b02df3cc38f17bceaa3a7848ee13a1232f0eaf4a7
+    image: docker.io/library/postgres:16-alpine@sha256:d60bd50d7e2d688f6dcfff8b02df3cc38f17bceaa3a7848ee13a1232f0eaf4a7
     container_name: authentik-postgresql
     restart: unless-stopped
     healthcheck:
@@ -17,7 +17,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
       TZ: ${TZ}
   redis:
-    image: docker.io/library/redis:alpine:sha256:e74faa347ab0b6a3c1b040834a35ea5f20e3aa02460db4bb9d5b4685f3dd3baf 
+    image: docker.io/library/redis:alpine@sha256:e74faa347ab0b6a3c1b040834a35ea5f20e3aa02460db4bb9d5b4685f3dd3baf 
     container_name: authentik-redis
     command: --save 60 1 --loglevel warning
     restart: unless-stopped
