@@ -86,8 +86,8 @@ services:
       - redis
 
 volumes:
-  database:
-    driver: local
+#  database:
+#    driver: local
   redis:
     driver: local
   media:
