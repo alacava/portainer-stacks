@@ -16,6 +16,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_DB: ${POSTGRES_DB}
       TZ: ${TZ}
+
   redis:
     image: docker.io/library/redis:alpine
     container_name: authentik-redis
