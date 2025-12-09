@@ -9,6 +9,8 @@ services:
       interval: 30s
       retries: 5
       timeout: 5s
+    ports:
+      - 5432:5432
     volumes:
       - database:/var/lib/postgresql/data
     environment:
